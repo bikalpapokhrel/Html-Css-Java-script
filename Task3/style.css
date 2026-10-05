@@ -1,0 +1,22 @@
+body {
+    font-family: Arial;
+}
+
+h1 {
+    color: blue;
+    font-size: 35px;
+    text-align: center;
+}
+
+p {
+    line-height: 1.6;
+}
+
+img {
+    width: 200px;
+}
+
+.skills {
+    background-color: lightblue;
+    padding: 20px;
+}
