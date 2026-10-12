@@ -1,0 +1,52 @@
+/* Simple layout matching the supplied reference image. */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; }
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.20);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.nav-content {
+  width: 85%;
+  margin: auto;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand { display: flex; align-items: center; }
+.brand img { display: block; width: 100px; height: 50px; object-fit: contain; }
+.nav-links { display: flex; align-items: center; gap: 8px; }
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  padding: 11px 15px;
+  border-radius: 6px;
+}
+.nav-links a.active, .nav-links a:hover { background: rgba(255, 255, 255, 0.25); }
+.hero {
+  height: 57vh;
+  min-height: 300px;
+  padding: 104px 20px 20px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(45deg, #ff0066, #c000a5, #5900ff);
+}
+.hero h1 { margin: 0 0 24px; font-size: 26px; font-weight: 700; }
+.hero p { margin: 0; font-size: 13px; line-height: 1.5; }
+.white-space { height: 65vh; background: white; }
+@media (max-width: 480px) {
+  .nav-content { width: 94%; }
+  .brand img { width: 85px; }
+  .nav-links { gap: 0; }
+  .nav-links a { padding: 10px 7px; font-size: 10px; }
+  .hero h1 { font-size: 23px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
